@@ -1,0 +1,26 @@
+factorial 5
+square 3
+:load various.hs 
+square 3
+:l square.hs 
+:l suare.hs
+factorial 6
+:}
+factorial x = x * factorial (x-1)
+factorial 1 = 1
+factorial :: Int->Int
+:{
+square 3
+suare 3
+:}
+square x = x*x
+square :: Int->Int
+:{
+:}
+:)
+}:
+square x = x*x
+square :: Int->Int
+:{
+Square :: Int -> Int
+square :: Int -> Int
