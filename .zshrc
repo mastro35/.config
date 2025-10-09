@@ -14,7 +14,6 @@ export PATH="$HOME/.local/bin:$PATH"
 . /opt/homebrew/etc/profile.d/z.sh
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3 # run chruby to see actual version
 
 [ -f "/Users/dave/.ghcup/env" ] && source "/Users/dave/.ghcup/env" # ghcup-env
 
