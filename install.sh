@@ -60,16 +60,19 @@ brew install mastro35/homebrew-mastro35/luka
 echo +++ Installing powerlevel10k
 brew install powerlevel10k
 
-echo +++ Installing JankyBorders
-brew tap FelixKratz/formulae
-brew install borders
+# echo +++ Installing JankyBorders
+# brew tap FelixKratz/formulae
+# brew install borders
 
-echo +++ Installing Sketchy Bar
-brew tap FelixKratz/formulae
-brew install sketchybar
+# echo +++ Installing Sketchy Bar
+# brew tap FelixKratz/formulae
+# brew install sketchybar
 
-echo +++ Installing Aerospace
-brew install --cask nikitabobko/tap/aerospace
+# echo +++ Installing Aerospace
+# brew install --cask nikitabobko/tap/aerospace
+
+echo +++ Installing RemindersMenubar
+brew install --cask reminders-menubar
 
 # Link system dotfiles
 ln -sf ~/.config/.zshrc ~/.zshrc

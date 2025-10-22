@@ -14,7 +14,7 @@ after-startup-command = [
 ]
 
 # Start AeroSpace at login
-start-at-login = true 
+start-at-login = false
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -26,7 +26,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 0
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -67,11 +67,12 @@ preset = 'qwerty'
 #                 In this example, 24 is a default value when there is no match.
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+
 [gaps]
 inner.horizontal = 10
 inner.vertical = 10
 outer.bottom = 10
-outer.top = [{ monitor.main = 10}, 10]
+outer.top = [{ monitor.main = 50}, 50]
 outer.right = 10
 outer.left = 10
 
@@ -121,13 +122,13 @@ alt-shift-r = ['exec-and-forget /opt/homebrew/bin/sketchybar --reload']
 # See: https://nikitabobko.github.ioeAeroSpace/commands#layout
 alt-e = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
-alt-f = 'fullscreen'
+alt-cmd-f = 'fullscreen'
 alt-y = ['focus right', 'join-with down', 'layout tiles horizontal']
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-left = 'focus left'
-alt-down = 'focus down'
-alt-up = 'focus up'
-alt-right = 'focus right'
+alt-cmd-left = 'focus left'
+alt-cmd-down = 'focus down'
+alt-cmd-up = 'focus up'
+alt-cmd-right = 'focus right'
 
 # app shortcut
 
@@ -149,6 +150,8 @@ alt-cmd-4 = 'workspace 4'
 alt-cmd-5 = 'workspace 5'
 alt-cmd-6 = 'workspace 6'
 alt-cmd-7 = 'workspace 7'
+alt-cmd-8 = 'workspace 8'
+alt-cmd-9 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -158,6 +161,8 @@ alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -185,40 +190,13 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # Default space
 [[on-window-detected]]
-if.app-id ='com.brave.Browser'
-run = ['move-node-to-workspace 1']
+if.app-id ='com.microsoft.Outlook'
+run = ['move-node-to-workspace 9']
 
 [[on-window-detected]]
-if.app-id ='com.brave.Browser.app.adcclpceapdbhchilkbngkehpppaefko'
-run = ['move-node-to-workspace 1']
+if.app-id ='com.apple.Safari'
+run = ['move-node-to-workspace 8']
 
-[[on-window-detected]]
-if.app-id ='com.mitchellh.ghostty'
-run = ['move-node-to-workspace 2']
-
-[[on-window-detected]]
-if.app-id ='com.todesktop.230313mzl4w4u92'
-run = ['move-node-to-workspace 3']
-
-[[on-window-detected]]
-if.app-id ='notion.id'
-run = ['move-node-to-workspace 4']
-
-[[on-window-detected]]
-if.app-id ='md.obsidian'
-run = ['move-node-to-workspace 4']
-
-[[on-window-detected]]
-if.app-id ='com.tinyspeck.slackmacgap'
-run = ['move-node-to-workspace 5']
-
-[[on-window-detected]]
-if.app-id ='com.hnc.Discord'
-run = ['move-node-to-workspace 5']
-
-[[on-window-detected]]
-if.app-id ='com.adobe.PremierePro.24'
-run = ['move-node-to-workspace 6']
 
 # force certain workspaces to certain monitors
 # [workspace-to-monitor-force-assignment]
