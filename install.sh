@@ -71,6 +71,9 @@ brew install powerlevel10k
 # echo +++ Installing Aerospace
 # brew install --cask nikitabobko/tap/aerospace
 
+echo +++ Installing Rectangle
+brew install rectangle
+
 echo +++ Installing RemindersMenubar
 brew install --cask reminders-menubar
 
