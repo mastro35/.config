@@ -30,7 +30,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # add functions to zsh to pair and unpair external devices
-MAGIC_KEYBOARD="<your-keyboard-id>"
+MAGIC_KEYBOARD="38-09-fb-13-da-44"
 MAGIC_MOUSE="3c-a6-f6-cf-91-1e"
 MAGIC_TRACKPAD="<your-trackpad-id>"
 
@@ -82,3 +82,7 @@ function unpair() {
   device_disconnect_unpair "$MAGIC_MOUSE" "MAGIC_MOUSE"
 }
 
+function reconnect() {
+	unpair
+	pair	
+}
