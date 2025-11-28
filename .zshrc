@@ -34,12 +34,6 @@ MAGIC_KEYBOARD="38-09-fb-13-da-44"
 MAGIC_MOUSE="3c-a6-f6-cf-91-1e"
 MAGIC_TRACKPAD="<your-trackpad-id>"
 
-
-# add functions to zsh to pair and unpair external devices
-MAGIC_KEYBOARD="<your-keyboard-id>" # Sostituisci con l'ID effettivo o lascialo vuoto/commentato
-MAGIC_MOUSE="3c-a6-f6-cf-91-1e"
-MAGIC_TRACKPAD="<your-trackpad-id>" # Sostituisci con l'ID effettivo o lascialo vuoto/commentato
-
 function pair() {
   # Funzione per eseguire il pairing e la connessione se la variabile è valorizzata
   local device_pair_connect() {
